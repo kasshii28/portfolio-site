@@ -1,0 +1,128 @@
+"use client";
+import { Button, Progress } from "../../components/";
+import { skillImgData, productData } from "@/app/data";
+import SkillType from "../../types/skill-type";
+import Link from "next/link";
+import Image from "next/image";
+
+export default async function skillPage() {
+  const res = await fetch(`http://localhost:3000/api/skill`, {
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error("Failed to fetch data");
+  const skilldata: SkillType[] = await res.json();
+
+  return (
+    <div>
+      <h1
+        className="
+            flex justify-center 
+            items-center text-4xl
+            mt-12"
+      >
+        Products
+      </h1>
+
+      <div className="my-12">
+        <ul
+          className="
+                    flex justify-center
+                    items-center gap-8"
+        >
+          {productData.map((product) => (
+            <li key={product.id}>
+              <div
+                className="
+                                max-w-sm rounded-xl 
+                                overflow-hidden 
+                                shadow-lg"
+              >
+                {product.url?.charAt(0) === "/" ? (
+                  <Link
+                    href={"/" + product.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className="w-full"
+                      src={"/" + product.img}
+                      alt="my product image"
+                      width={200}
+                      height={200}
+                    ></Image>
+                  </Link>
+                ) : (
+                  <Link
+                    href={product.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className="w-full"
+                      src={"/" + product.img}
+                      alt="my product image"
+                      width={200}
+                      height={200}
+                    ></Image>
+                  </Link>
+                )}
+                <div className="px-6 py-4">
+                  <div className="font-bold text-xl mb-2">{product.title}</div>
+                  <p className="text-gray-700 text-base">
+                    {product.description}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h1
+        className="
+            flex justify-center 
+            items-center text-4xl
+            my-12"
+      >
+        Skills
+      </h1>
+
+      <div
+        className="
+            flex bg-slate-50
+            flex-col items-center 
+            gap-5 mx-20
+            my-12 py-5
+            shadow-gray shadow-xl"
+      >
+        <div>
+          <ul
+            className="
+                    flex flex-wrap 
+                    items-center justify-center 
+                    gap-3 lg:gap-20 lg:flex-nowrap 
+                    "
+          >
+            {skillImgData.map((img) => (
+              <li key={img}>
+                <span>
+                  <Image
+                    src={"/" + img}
+                    width={80}
+                    height={80}
+                    alt="github icon"
+                    priority
+                  ></Image>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <Progress skills={skilldata} />
+      <div className="py-12">
+        <Button message="Back Home" />
+      </div>
+    </div>
+  );
+}
