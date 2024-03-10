@@ -18,7 +18,7 @@ interface NotionPostInfoProps {
 }
 
 const notion = new Client({
-  auth: process.env.NOTION_TOKEN,
+  auth: "secret_WMi8xDkcBSXkNPEx2Xf2ia67ZDwMAFwZLvWcBByOclx",
 });
 
 export async function getAllPosts(): Promise<NotionPostProps[]> {
@@ -38,9 +38,9 @@ export async function getAllPosts(): Promise<NotionPostProps[]> {
     const title = post.properties.title.title[0]?.plain_text;
     const date = post.properties.createdate.date.start;
     const types = post.properties.types.multi_select.map(
-      (item: any) => item.name,
-    );
-    const files = post.properties.file.files.map((file: any) => file.file.url);
+    (item: any) => item.name);
+    const files = post.properties.file.files.map(
+      (file: any) => file.file.url);
     const author = post.properties.author.select.name;
     return { id, title, date, types, files, author };
   });
