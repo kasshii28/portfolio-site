@@ -23,7 +23,7 @@ const notion = new Client({
 
 export async function getAllPosts(): Promise<NotionPostProps[]> {
   const res = await notion.databases.query({
-    database_id: process.env.DATABASE_ID,
+    database_id: "e14a7577a2b543b4be9f1025142946a0",
     sorts: [
       {
         property: "createdate",
