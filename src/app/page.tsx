@@ -6,19 +6,17 @@ export default function Home() {
       <div
         className="
           h-screen
-          w-screen
-          flex
-          justify-center
-          items-center"
+          flex flex-col justify-center items-center"
       >
         <Image
           src="/cat1.png"
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           alt="my cat picture"
           priority
+          className="py-14"
         ></Image>
-        <div className="mx-12 text-9xl">KASSHII</div>
+        <div className="text-7xl md:mx-12 md:text-8xl">KASSHII</div>
       </div>
     </main>
   );

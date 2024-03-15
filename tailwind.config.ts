@@ -14,10 +14,21 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        xl: "1400px",
+        lg: "1200px",
+        md: "992px",
+        sm: "768px",
+        xs: "576px",
       },
     },
     extend: {
+      fontFamily:{
+        "sans":[
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

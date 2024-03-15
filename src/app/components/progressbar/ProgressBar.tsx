@@ -1,5 +1,5 @@
 "use client";
-import SkillType from "@/app/types/skill-type";
+import { SkillValue } from "@/app/types/data";
 import {
   CircularProgress,
   Card,
@@ -9,7 +9,7 @@ import {
 } from "@nextui-org/react";
 
 interface SkillListProps {
-  skills: SkillType[];
+  skills: SkillValue[];
 }
 
 export default function App({ skills }: SkillListProps) {

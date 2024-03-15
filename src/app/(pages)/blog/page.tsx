@@ -8,12 +8,14 @@ export default async function Home() {
   const postsProperties = await getAllPosts();
 
   return (
-    <div className="container mx-auto">
+    <div className="pt-20">
       <h1
         className="
             flex justify-center 
-            items-center text-4xl
-            my-12"
+            items-center lg:text-4xl
+            sm:text-3xl text-2xl font-medium 
+            title-font py-16 px-0
+            text-gray-900 font-sans"
       >
         Blog
       </h1>

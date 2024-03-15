@@ -1,7 +1,7 @@
 "use client";
 import { Button, Progress } from "../../components/";
 import { skillImgData, productData } from "@/app/data";
-import SkillType from "../../types/skill-type";
+import { SkillValue } from "../../types/data";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,15 +10,17 @@ export default async function skillPage() {
     cache: "no-store",
   });
   if (!res.ok) throw new Error("Failed to fetch data");
-  const skilldata: SkillType[] = await res.json();
+  const skilldata: SkillValue[] = await res.json();
 
   return (
-    <div>
+    <div className="pt-20">
       <h1
         className="
-            flex justify-center 
-            items-center text-4xl
-            mt-12"
+        flex justify-center 
+        items-center lg:text-4xl
+        sm:text-3xl text-2xl font-medium 
+        title-font my-12 
+        text-gray-900 font-sans"
       >
         Products
       </h1>
@@ -81,8 +83,10 @@ export default async function skillPage() {
       <h1
         className="
             flex justify-center 
-            items-center text-4xl
-            my-12"
+            items-center lg:text-4xl
+            sm:text-3xl text-2xl font-medium 
+            title-font my-12 
+            text-gray-900 font-sans"
       >
         Skills
       </h1>

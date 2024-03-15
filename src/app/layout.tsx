@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { Header } from "./components";
+import { Links } from "./data/link";
 import "./globals.css";
 
 const notoSans = Noto_Sans_JP({ subsets: ["latin"] });
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body suppressHydrationWarning={true} className={notoSans.className}>
-        <Header />
+        <Header links={Links}/>
         <main>{children}</main>
       </body>
     </html>

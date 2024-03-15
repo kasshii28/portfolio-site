@@ -4,12 +4,14 @@ import Link from "next/link";
 
 const aboutPage = () => {
   return (
-    <div>
+    <div className="pt-20">
       <h1
         className="
-            flex justify-center 
-            items-center text-4xl
-            my-12"
+          flex justify-center 
+          items-center lg:text-4xl
+          sm:text-3xl text-2xl font-medium 
+          title-font my-12 
+          text-gray-900 font-sans"
       >
         About me
       </h1>
@@ -130,7 +132,7 @@ const aboutPage = () => {
           </div>
         </div>
       </section>
-      <div className="py-12">
+      <div className="py-6">
         <Button message="Back Home" />
       </div>
     </div>
