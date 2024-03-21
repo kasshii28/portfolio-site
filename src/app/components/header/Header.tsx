@@ -1,6 +1,5 @@
 "use client"
 import { LinkValue } from "@/app/types/data";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,24 +8,6 @@ interface LinkProps {
 }
 
 export default function Header({ links }: LinkProps){
-  
-  // return (
-  //   // <header className="
-  //   //     w-screen
-  //   //   <nav className="
-  //   //       flex justify-between items-center px-6">
-  //   //     <ul className="flex gap-12 invisible md:visible">
-  //   //       {links.map((link) =>(
-  //   //         <li key={link.name}>
-  //   //           <Link href={link.href} className="hover:opacity-50 text-2xl font-sans">
-  //   //             {link.name}
-  //   //           </Link>
-  //   //         </li>
-  //   //       ))}
-  //   //     </ul>
-  //   //   </nav>
-  //   // </header>
-  // );
   const [isOpen, setOpen] = useState<boolean>(false);
   const handleMenuOpen = () => {
     setOpen(!isOpen);
@@ -44,7 +25,8 @@ export default function Header({ links }: LinkProps){
         items-center 
         bg-gray-500
         shadow-slate-500 
-        shadow-sm font-body">
+        shadow-sm font-body
+        z-50">
         <p>
           <Link href="/" className="text-3xl text-white mx-6 font-sans">
             KASSHII

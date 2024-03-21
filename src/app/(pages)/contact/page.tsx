@@ -104,6 +104,7 @@ export default function ContactPage() {
                 <div className="relative">
                   <label
                     htmlFor="email"
+                    aria-label="contact"
                     className="
                       leading-7 text-sm 
                       text-gray-600"

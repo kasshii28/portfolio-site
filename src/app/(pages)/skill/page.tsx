@@ -6,9 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default async function skillPage() {
-  const res = await fetch(`http://localhost:3000/api/skill`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`http://localhost:3000/api/skill`);
   if (!res.ok) throw new Error("Failed to fetch data");
   const skilldata: SkillValue[] = await res.json();
 
@@ -28,16 +26,16 @@ export default async function skillPage() {
       <div className="my-12">
         <ul
           className="
-                    flex justify-center
-                    items-center gap-8"
+            flex-none md:flex justify-center
+            items-center gap-8 mx-8"
         >
           {productData.map((product) => (
-            <li key={product.id}>
+            <li className="my-4" key={product.id}>
               <div
                 className="
-                                max-w-sm rounded-xl 
-                                overflow-hidden 
-                                shadow-lg"
+                  max-w-sm rounded-xl 
+                  overflow-hidden 
+                  shadow-lg"
               >
                 {product.url?.charAt(0) === "/" ? (
                   <Link
@@ -51,6 +49,11 @@ export default async function skillPage() {
                       alt="my product image"
                       width={200}
                       height={200}
+                      priority
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     ></Image>
                   </Link>
                 ) : (
