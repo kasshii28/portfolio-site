@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const res = await fetch(`http://localhost:3001/skillLists`,{
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${apiUrl}/skillLists`,{
     cache: "no-store",
   });
   const skillData = await res.json();
