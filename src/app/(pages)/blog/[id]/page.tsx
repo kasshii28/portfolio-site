@@ -10,7 +10,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div>
       <div className="container mx-auto tp-20 md:w-4/5 lg:w-3/5">
-        <div className="flex justify-left ">
+        <div className="flex justify-left mx-4">
           <Link href="/blog">
             <Button message="Back" />
           </Link>
