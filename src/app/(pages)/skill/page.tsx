@@ -6,7 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default async function skillPage() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/skill`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/skill`,{
+    cache: "no-store",
+  });
   if (!res.ok) throw new Error("Failed to fetch data");
   const skilldata: SkillValue[] = await res.json();
 
