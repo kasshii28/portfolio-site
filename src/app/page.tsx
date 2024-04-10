@@ -5,8 +5,8 @@ export default function Home() {
     <main>
       <div
         className="
-          h-screen
-          flex flex-col justify-center items-center"
+          h-screen  flex flex-col 
+          justify-center items-center"
       >
         <Image
           src="/cat1.png"
@@ -16,7 +16,13 @@ export default function Home() {
           priority
           className="py-14"
         ></Image>
-        <div className="text-7xl md:mx-12 md:text-8xl">KASSHII</div>
+        <div 
+          className="
+            text-7xl md:mx-12 
+            md:text-8xl"
+          >
+            KASSHII
+        </div>
       </div>
     </main>
   );

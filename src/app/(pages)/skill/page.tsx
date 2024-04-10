@@ -14,13 +14,13 @@ export default async function skillPage() {
 
   return (
     <div className="pt-20">
-      <h1
+      <h1　
         className="
-        flex justify-center 
-        items-center lg:text-4xl
-        sm:text-3xl text-2xl font-medium 
-        title-font my-12 
-        text-gray-900 font-sans"
+          flex justify-center 
+          items-center lg:text-4xl
+          sm:text-3xl text-2xl font-medium 
+          title-font my-12 
+          text-gray-900 font-sans"
       >
         Products
       </h1>
@@ -87,30 +87,29 @@ export default async function skillPage() {
 
       <h1
         className="
-            flex justify-center 
-            items-center lg:text-4xl
-            sm:text-3xl text-2xl font-medium 
-            title-font my-12 
-            text-gray-900 font-sans"
+          flex justify-center 
+          items-center lg:text-4xl
+          sm:text-3xl text-2xl font-medium 
+          title-font my-12 
+          text-gray-900 font-sans"
       >
         Skills
       </h1>
 
       <div
         className="
-            flex bg-slate-50
-            flex-col items-center 
-            gap-5 mx-20
-            my-12 py-5
-            shadow-gray shadow-xl"
+          flex bg-slate-50
+          flex-col items-center 
+          gap-5 mx-20
+          my-12 py-5
+          shadow-gray shadow-xl"
       >
         <div>
           <ul
             className="
-                    flex flex-wrap 
-                    items-center justify-center 
-                    gap-3 lg:gap-20 lg:flex-nowrap 
-                    "
+              flex flex-wrap 
+              items-center justify-center 
+              gap-3 lg:gap-20 lg:flex-nowrap "
           >
             {skillImgData.map((img) => (
               <li key={img}>
