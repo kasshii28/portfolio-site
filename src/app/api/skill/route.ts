@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const apiUrl = process.env.NEXT_PUBLIC_JSON_URL;
-  const res = await fetch(`${apiUrl}/skillLists`,{
+  const res = await fetch(`${process.env.NEXT_PUBLIC_JSON_URL}/skillLists`,{
     cache: "no-store",
   });
 
