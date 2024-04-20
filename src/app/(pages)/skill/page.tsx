@@ -129,7 +129,7 @@ export default async function skillPage() {
       </div>
       <Progress skills={skilldata} />
       <div className="py-12">
-        <Link href="/Home">
+        <Link href="/">
           <Button message="Back Home" />
         </Link>
       </div>
