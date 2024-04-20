@@ -203,7 +203,7 @@ const aboutPage = () => {
         </div>
       </section>
       <div className="py-6">
-        <Link href="/Home">
+        <Link href="/">
           <Button message="Back Home" />
         </Link>
       </div>
