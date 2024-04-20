@@ -14,12 +14,12 @@ export default async function skillPage() {
 
   return (
     <div className="pt-20">
-      <h1　
+      <h1
         className="
-          flex justify-center 
+          flex justify-center
           items-center lg:text-4xl
-          sm:text-3xl text-2xl font-medium 
-          title-font my-12 
+          sm:text-3xl text-2xl font-medium
+          title-font my-12
           text-gray-900 font-sans"
       >
         Products
@@ -35,8 +35,8 @@ export default async function skillPage() {
             <li className="my-4" key={product.id}>
               <div
                 className="
-                  max-w-sm rounded-xl 
-                  overflow-hidden 
+                  max-w-sm rounded-xl
+                  overflow-hidden
                   shadow-lg"
               >
                 {product.url?.charAt(0) === "/" ? (
@@ -129,7 +129,9 @@ export default async function skillPage() {
       </div>
       <Progress skills={skilldata} />
       <div className="py-12">
-        <Button message="Back Home" />
+        <Link href="/Home">
+          <Button message="Back Home" />
+        </Link>
       </div>
     </div>
   );
