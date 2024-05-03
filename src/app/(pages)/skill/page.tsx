@@ -1,7 +1,7 @@
 "use client";
-import { Button, Progress } from "../../components/";
+import { Button, Progress } from "@/app/components/";
 import { skillImgData, productData } from "@/app/data";
-import { SkillValue } from "../../types/data";
+import { SkillValue } from "@/app/types/data";
 import Link from "next/link";
 import Image from "next/image";
 

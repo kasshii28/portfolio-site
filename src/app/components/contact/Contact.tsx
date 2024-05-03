@@ -36,12 +36,12 @@ const Contact = ({ waitTime }: { waitTime: number }) => {
             value={content}
             placeholder="お問い合わせ内容を書いてください"
             className="
-                        p-2 
-                        w-[600px] 
-                        h-[400px] 
-                        border 
-                        border-black 
-                        resize-none"
+              p-2 
+              w-[600px] 
+              h-[400px] 
+              border 
+              border-black 
+              resize-none"
             onChange={(e) => setContent(e.target.value)}
           ></textarea>
         </div>

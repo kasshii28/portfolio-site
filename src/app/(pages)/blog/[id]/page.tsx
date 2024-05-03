@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getPageContent, getPageInfo } from "../../../../lib/notion/notion";
+import { getPageContent, getPageInfo } from "@/lib/notion/notion";
 import ReactMarkdown from "react-markdown";
 import { Button } from "@/app/components";
 
